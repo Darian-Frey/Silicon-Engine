@@ -1,0 +1,4 @@
+# Silicon Engine
+**Silicon Engine** is a forensic-grade ROM workbench for digital archaeology. It uses **Shannon Entropy** and **C++ pattern carving** to map binary data into a "Cyberpunk" Rust UI. 
+
+Identify headers, visualize tile data, and extract assets from Sega, Nintendo, and Sony systems with near-zero latency. The ultimate lab for silicon history.

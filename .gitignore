@@ -1,0 +1,21 @@
+# --- Rust Artifacts ---
+/target
+Cargo.lock
+**/*.rs.bk
+
+# --- C++ Build Artifacts ---
+/core/build/
+/core/bin/
+*.o
+*.obj
+*.lib
+*.a
+*.pdb
+*.exe
+
+# --- OS / IDE Junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

@@ -9,6 +9,9 @@ extern "C" {
     pub fn get_system_name(buffer: *mut c_char);
     pub fn get_rom_title(buffer: *mut c_char);
     pub fn calculate_entropy_map(buffer: *mut f32, chunks: c_int);
+    pub fn get_rom_size() -> c_int;
+    pub fn read_rom_range(offset: u32, length: u32, buffer: *mut u8);
+    pub fn decode_sega_tile(offset: u32, buffer: *mut u8);
 }
 
 #[allow(dead_code)]

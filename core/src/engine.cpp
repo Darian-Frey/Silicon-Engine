@@ -32,7 +32,15 @@ float calculate_shannon(const uint8_t *data, size_t size) {
 }
 
 extern "C" {
-// ... keep previous functions ...
+int32_t get_core_version() { return 100; } // v0.1.0
+
+void get_system_name(char *buffer) {
+  std::strcpy(buffer, current_session.system_name.c_str());
+}
+
+void get_rom_title(char *buffer) {
+  std::strcpy(buffer, current_session.rom_title.c_str());
+}
 
 int32_t identify_system(const char *path) {
   std::ifstream file(path, std::ios::binary);

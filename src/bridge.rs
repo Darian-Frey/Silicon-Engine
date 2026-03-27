@@ -3,6 +3,7 @@ use std::os::raw::{c_char, c_int};
 
 #[link(name = "silicon_core", kind = "static")]
 extern "C" {
+    #[allow(dead_code)]
     pub fn get_core_version() -> c_int;
     pub fn identify_system(path: *const c_char) -> c_int;
     pub fn get_system_name(buffer: *mut c_char);
@@ -10,6 +11,7 @@ extern "C" {
     pub fn calculate_entropy_map(buffer: *mut f32, chunks: c_int);
 }
 
+#[allow(dead_code)]
 pub fn analyze_rom(path: &str) {
     let c_path = CString::new(path).unwrap();
     
@@ -34,6 +36,7 @@ pub fn analyze_rom(path: &str) {
 }
 
 // New function to visualize entropy in the terminal
+#[allow(dead_code)]
 pub fn test_entropy_scan(path: &str) {
     let c_path = CString::new(path).unwrap();
     unsafe {

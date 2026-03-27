@@ -4,11 +4,14 @@
 #include <cstdint>
 
 extern "C" {
-// Returns the version of the Forensic Core
 int32_t get_core_version();
+int32_t identify_system(const char *path);
+void get_system_name(char *buffer);
+void get_rom_title(char *buffer);
 
-// A simple test to prove we can pass data
-int32_t add_numbers(int32_t a, int32_t b);
+// NEW: Calculate entropy for the loaded ROM
+// chunks: how many segments to divide the ROM into (e.g., 256 for the ribbon)
+void calculate_entropy_map(float *output_buffer, int32_t chunks);
 }
 
 #endif

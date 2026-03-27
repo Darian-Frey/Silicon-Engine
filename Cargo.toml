@@ -8,6 +8,7 @@ build = "build.rs"
 # UI Framework
 egui = "0.26"
 eframe = "0.26"
+color-eyre = "0.6"
 
 [build-dependencies]
 cc = "1.0" # This runs our build.rs script
